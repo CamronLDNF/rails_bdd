@@ -12,23 +12,13 @@ Given("the following articles exists") do |table|
     end
 end
 
-# Given("I visit the {string} page") do |string|
-#     pending # Write code here that turns the phrase above into concrete actions
-# end
-
-When("I click {string} link") do |link|
-    click_on(link)
+When("I click {string}") do |value|
+    click_on value
 end
 
-When("I fill in {string} with {string}") do |title, title_input|
-    fill_in('title', with: 'title_input')
+When("I fill in {string} with {string}") do |input_field, input_value|
+    fill_in input_field, with: 'input_value'
 end
-
-# Why are we not using the below step for the content field? Now only the title input (above) is being checked.
-
-    # And("I fill in {string} with {string}") do |content, content_input|
-    #     fill_in('content', with: 'content_input')
-    # end
 
 When("I click {string} button") do |button_name|
     click_button button_name
@@ -39,3 +29,9 @@ Then("I should be on {string} page") do |title|
     expect(page).to have_selector(title)
 end
 
+
+
+
+Then("show me the page") do
+    save_and_open_page
+end
