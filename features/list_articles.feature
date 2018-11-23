@@ -1,8 +1,8 @@
 
 Feature: List articles on the landing page
-    "As a visitor,
+    As a visitor,
     When I visit the landing page of the application
-    I would like to see a list of all articles"
+    I would like to see a list of all articles
 
     Scenario: View list of articles on the landing page
         Given the following articles exists
@@ -14,5 +14,4 @@ Feature: List articles on the landing page
         And I should see "Some really breaking action"
         And I should see "Learn Rails 5"
         And I should see "Build awesome rails applications"
-
 
