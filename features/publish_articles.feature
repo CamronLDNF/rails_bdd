@@ -12,7 +12,6 @@ Feature: Create articles
     When I fill in "Title" with "Learning Rails 5"
     And I fill in "Content" with "Excited about learning a new framework"
     And I click "Create Article"
-    # Then show me the page
     Then I should be on "Learning Rails 5" page
     And I should see "Article was successfully created."
     And I should see "Learning Rails 5"
