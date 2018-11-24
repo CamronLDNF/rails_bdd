@@ -20,14 +20,14 @@ When("I fill in {string} with {string}") do |input_field, input_value|
     fill_in input_field, with: 'input_value'
 end
 
-When("I click {string} button") do |button_name|
-    click_button button_name
-end
+# When("I click {string} button") do |button_name|
+#     click_button button_name
+# end
 
-Then("I should be on {string} page") do |title|
-    visit articles_path
-    expect(page).to have_selector(title)
-end
+# Then("I should be on {string} page") do |title|
+#     visit articles_path
+#     expect(page).to have_selector(title)
+# end
 
 # Then("I should be on {string} page") do |title|
 #     visit('/article.html')
