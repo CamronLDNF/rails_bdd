@@ -38,8 +38,6 @@ end
 #     pending # Write code here that turns the phrase above into concrete actions
 # end
 
-
-
 Then("show me the page") do
     save_and_open_page
 end
