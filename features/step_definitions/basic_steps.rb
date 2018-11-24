@@ -2,8 +2,8 @@ When("I visit the site") do
     visit root_path
 end
 
-Then("I should see {string}") do |content|
-    expect(page).to have_content content
+Then("I should see {string}") do |value|
+    expect(page).to have_content value
 end
 
 Given("the following articles exists") do |table|
@@ -17,26 +17,13 @@ When("I click {string}") do |value|
 end
 
 When("I fill in {string} with {string}") do |input_field, input_value|
-    fill_in input_field, with: 'input_value'
+    fill_in input_field, with: input_value
 end
 
-# When("I click {string} button") do |button_name|
-#     click_button button_name
-# end
-
-# Then("I should be on {string} page") do |title|
-#     visit articles_path
-#     expect(page).to have_selector(title)
-# end
-
-# Then("I should be on {string} page") do |title|
-#     visit('/article.html')
-#     expect(page).to have_selector(title)
-# end
-
-# Then("I should be on {string} page") do |string|
-#     pending # Write code here that turns the phrase above into concrete actions
-# end
+#parameter is redundant. Refactor when done. Remove quotation marks from the corresponding feature line and replance {string} here with that title hardcoded instead.
+Then("I should be on {string} page") do |title|
+    expect(page).to have_current_path(article_path("#{Article.last.id}"))
+end
 
 Then("show me the page") do
     save_and_open_page
