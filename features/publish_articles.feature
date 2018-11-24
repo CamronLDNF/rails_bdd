@@ -9,7 +9,7 @@ Feature: Create articles
     When I click "New Article"
 
   Scenario: Successfully create an article [Happy Path]
-      Then show me the page
+    # Then show me the page
     When I fill in "title" with "Learning Rails 5"
     And I fill in "content" with "Excited about learning a new framework"
     And I click "Create Article"
