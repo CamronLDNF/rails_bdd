@@ -6,7 +6,7 @@ Then("I should see {string}") do |value|
     expect(page).to have_content value
 end
 
-Given("the following articles exists") do |table|
+Given("the following articles exist") do |table|
     table.hashes.each do |article|
         Article.create!(article)
     end
@@ -23,6 +23,10 @@ end
 #parameter is redundant. Refactor when done. Remove quotation marks from the corresponding feature line and replance {string} here with that title hardcoded instead.
 Then("I should be on {string} page") do |title|
     expect(page).to have_current_path(article_path("#{Article.last.id}"))
+end
+
+And("I am on the {string} page") do |page|
+    
 end
 
 Then("show me the page") do
