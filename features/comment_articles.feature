@@ -22,8 +22,8 @@ Feature: Comment on articles
 
   Scenario: Comment on an article [Sad path]
     When I click "Show"
-    And I fill in "Commenter" with "John Doe"
-    And I fill in "Body" with "This is dope!"
+    And I fill in "Name" with "John Doe"
+    And I fill in "Comment" with "This is dope!"
     And I click "Create Comment"
     Then I should see "Email address is not valid"
 
