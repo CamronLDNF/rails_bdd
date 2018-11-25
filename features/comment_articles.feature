@@ -35,10 +35,3 @@ Feature: Comment on articles
     And I fill in "Email" with "johndoe@"
     And I click "Add comment"
     Then I should see "Email address is not valid"
-
-# You should add a validation that makes sure that the email address is valid. 
-# We don't want to display badly formatted emails, do we? ("thomas@gmail",  "bad prefix@random.com", etc)
-
-# Visitors should be able to OPTIONALLY provide their email address  
-
-# Another feature is to display the commenters link IF he has provided an address. 

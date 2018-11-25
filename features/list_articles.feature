@@ -1,4 +1,3 @@
-
 Feature: List articles on the landing page
 
     As a visitor,

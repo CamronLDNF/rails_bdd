@@ -20,7 +20,6 @@ When("I fill in {string} with {string}") do |input_field, input_value|
     fill_in input_field, with: input_value
 end
 
-#parameter is redundant. Refactor when done. Remove quotation marks from the corresponding feature line and replance {string} here with that title hardcoded instead.
 Then("I should be on {string} page") do |title|
     expect(page).to have_current_path(article_path("#{Article.last.id}"))
 end
