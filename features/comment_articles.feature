@@ -15,7 +15,7 @@ Feature: Comment on articles
     And I fill in "Name" with "John Doe"
     And I fill in "Comment" with "This is dope!"
     And I fill in "Email" with "johndoe@hotmail.com"
-    And I click "Create Comment"
+    And I click "Add comment"
     Then I should see "John Doe"
     And I should see "This is dope!"
     And I should see "johndoe@hotmail.com"
@@ -24,7 +24,7 @@ Feature: Comment on articles
     When I click "Show"
     And I fill in "Name" with "John Doe"
     And I fill in "Comment" with "This is dope!"
-    And I click "Create Comment"
+    And I click "Add comment"
     Then I should see "Email address is not valid"
 
 
