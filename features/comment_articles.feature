@@ -12,8 +12,8 @@ Feature: Comment on articles
 
   Scenario: Comment on an article [Happy path]
     When I click "Show"
-    And I fill in "Commenter" with "John Doe"
-    And I fill in "Body" with "This is dope!"
+    And I fill in "Name" with "John Doe"
+    And I fill in "Comment" with "This is dope!"
     And I fill in "Email" with "johndoe@hotmail.com"
     And I click "Create Comment"
     Then I should see "John Doe"

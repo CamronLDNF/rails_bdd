@@ -10,4 +10,33 @@
   <%= @article.content %>
 </p>
 
+<h2>Comments</h2>
+<% @article.comments.each do |comment| %>
+  <p>
+    <strong>Name:</strong>
+    <%= comment.name %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.comment %>
+  </p>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :comment %><br>
+    <%= form.text_area :comment %>
+  </p>
+  <p>
+    <%= form.submit value="Add comment"%>
+  </p>
+<% end %>
+
+<br>
 <%= link_to 'Back to list', articles_path %>
