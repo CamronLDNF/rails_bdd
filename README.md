@@ -1,6 +1,6 @@
 # **Rails Demo**
 -------
-Heroku site: ...
+Deployed to: https://peaceful-peak-31156.herokuapp.com/
 Repo: https://github.com/CamronLDNF/rails_bdd
 
 ## Assignment
