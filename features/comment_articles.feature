@@ -16,6 +16,8 @@ Feature: Comment on articles
     And I fill in "Comment" with "This is dope!"
     And I fill in "Email" with "johndoe@hotmail.com"
     And I click "Add comment"
+          # Then show me the page
+
     Then I should see "John Doe"
     And I should see "This is dope!"
     And I should see "johndoe@hotmail.com"

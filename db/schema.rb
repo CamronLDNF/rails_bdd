@@ -1,4 +1,4 @@
-ActiveRecord::Schema.define(version: 2018_11_25_013143) do
+ActiveRecord::Schema.define(version: 2018_11_25_144804) do
 
   enable_extension "plpgsql"
 
@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2018_11_25_013143) do
     t.bigint "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email"
     t.index ["article_id"], name: "index_comments_on_article_id"
   end
 
