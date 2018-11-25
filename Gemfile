@@ -12,6 +12,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'validates_email_format_of'
 
 group :development, :test do
   gem 'cucumber-rails', require: false
@@ -23,7 +24,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'launchy'
-  gem 'validates_email_format_of'
 end
 
 group :development do
