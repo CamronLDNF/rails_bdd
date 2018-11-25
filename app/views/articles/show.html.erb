@@ -32,7 +32,6 @@
 <h3>Add a comment:</h3>
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
 
-
   <p>
     <%= form.label :name %><br>
     <%= form.text_field :name %>

@@ -1,8 +1,5 @@
 class CommentsController < ApplicationController
-    # def new
-    #     @comment = Comment.new
-    # end
-    
+
     def create
         @article = Article.find(params[:article_id])
         @comment = @article.comments.create(comment_params)
