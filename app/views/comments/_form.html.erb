@@ -1,0 +1,20 @@
+<%= form_for([@article, local_assigns[:comment] || @article.comments.build]) do |form| %>
+    <p>
+        <%= form.label :name %><br />
+        <%= form.text_field :name %>
+    </p>
+
+    <p>
+        <%= form.label :comment %><br />
+        <%= form.text_area :comment %>
+    </p>
+
+    <p>
+        <%= form.label :email %><br>
+        <%= form.text_field :email %>
+    </p>
+
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>

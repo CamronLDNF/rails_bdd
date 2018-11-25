@@ -23,6 +23,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'launchy'
+  gem 'validates_email_format_of'
 end
 
 group :development do
