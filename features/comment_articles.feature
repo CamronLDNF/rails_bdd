@@ -10,7 +10,7 @@ Feature: Comment on articles
       | A breaking news item | Some really breaking action      |
     And I visit the site
 
-  Scenario: Comment on an article [Happy path]
+  Scenario: Comment on an article - with an email [Happy path]
     When I click "Show"
     And I fill in "Name" with "John Doe"
     And I fill in "Comment" with "This is dope!"
@@ -20,12 +20,20 @@ Feature: Comment on articles
     And I should see "This is dope!"
     And I should see "johndoe@hotmail.com"
 
-  Scenario: Comment on an article [Sad path]
+  Scenario: Comment on an article - without an email [Happy path]
     When I click "Show"
     And I fill in "Name" with "John Doe"
     And I fill in "Comment" with "This is dope!"
     And I click "Add comment"
-    Then show me the page
+    Then I should see "John Doe"
+    And I should see "This is dope!"
+
+  Scenario: Comment on an article without valid email [Sad path]
+    When I click "Show"
+    And I fill in "Name" with "John Doe"
+    And I fill in "Comment" with "This is dope!"
+    And I fill in "Email" with "johndoe@"
+    And I click "Add comment"
     Then I should see "Email address is not valid"
 
 # You should add a validation that makes sure that the email address is valid. 
